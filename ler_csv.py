@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 
 # Caminho do arquivo CSV
-file_path = 'C:\\Users\\Fabio\\OneDrive\\Área de Trabalho\\Unifecaf\\Disruptive Architectures IOT, Big Data e IA\\Fabio_RA_42799_Porfólio\\IOT-temp.csv'
+file_path = 'C:\\Users\\Fabio\\OneDrive\\Área de Trabalho\\Unifecaf\\Disruptive Architectures IOT, Big Data e IA\\Temperaturas_iot\\IOT-temp.csv'
 
 # Ler o arquivo CSV
 df = pd.read_csv(file_path)
