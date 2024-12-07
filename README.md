@@ -92,7 +92,7 @@ obtidos:
 - Média de Temperatura por Sala:A média de temperatura por sala pode indicar ambientes que necessitam de melhor controle climático.
 - Picos de leituras por Hora:A análise das laeituras por hora pode ajudar a identificar
 horários de maior atividade e demanda no monitoramento de temperatura.
-- Temperaturas Extremas:** As temperaturas máximas e mínimas por dia podem indicar eventos
+- Temperaturas Extremas: As temperaturas máximas e mínimas por dia podem indicar eventos
 climáticos extremos ou falhas nos dispositivos de monitoramento.
 
 Esses insights podem ser utilizados para otimizar o ambiente e garantir condições ideais de 
