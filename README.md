@@ -17,7 +17,7 @@ Pandas e SQLAlchemy, e os dados são armazenados em um banco de dados PostgreSQL
 
 1. Clone o repositório do projeto:
   ```sh
-git clone https://github.com
+git clone https://github.com/FabioHenriquefbi/dashboard_temperaturas_iot
 
 docker run --name postgres-iot -e POSTGRES_PASSWORD=1234 -d postgres
 
