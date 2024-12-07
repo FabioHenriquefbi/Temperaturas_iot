@@ -98,3 +98,4 @@ climáticos extremos ou falhas nos dispositivos de monitoramento.
 Esses insights podem ser utilizados para otimizar o ambiente e garantir condições ideais de 
 temperatura, tanto internas quanto externas.
 
+# Temperaturas_iot
