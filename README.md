@@ -99,3 +99,4 @@ Esses insights podem ser utilizados para otimizar o ambiente e garantir condiÃ§Ã
 temperatura, tanto internas quanto externas.
 
 # Temperaturas_iot
+# Temperaturas_iot.
