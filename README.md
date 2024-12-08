@@ -1,8 +1,10 @@
-# Dashboard de Temperaturas Iot 
+# Temperaturas Iot Dashboard
 
-Este projeto criar um dashboard interativo para monitoramento de temperaturas utilizando dados
-de sensores Iot . O dashboard é desevolvimento em Python, utilizando as bibliotecas Streamlit,
-Pandas e SQLAlchemy, e os dados são armazenados em um banco de dados PostgreSQL.
+Neste projeto, fomos capazes de criar um dashboard interativo para visualização de temperaturas dados
+
+coletados de sensores Iot. O codigo foi escrito em Python e depende das bibliotecas Streamlit, Pandas,
+
+SQLAlchemy para a entrega do relatório, e os dados são armazenados em um banco de dados Postgres.
 
 ## Configuração 
 
@@ -10,13 +12,12 @@ Pandas e SQLAlchemy, e os dados são armazenados em um banco de dados PostgreSQL
 
 - Docker
 - Python 3.8+
-- PostgreSQL
+- Banco de Dados: PostgreSQL
 - Bibliotecas Python: pandas, plotly, sqlalchemy, streamlit, psycopg2
 
 ### Instalação
 
 1. Clone o repositório do projeto:
-  ```sh
 git clone https://github.com/FabioHenriquefbi/temperaturas_iot
 
 docker run --name postgres-iot -e POSTGRES_PASSWORD=1234 -d postgres
@@ -31,17 +32,14 @@ python ler_csv.py
 
 ### 3. Execução do projeto 
 
-```markdown
 
 ## Execução
 
 1. Execute o dashboard com Streamlit:
-  ```sh
   streamlit run dashboard.py
 
 #### 4.Capturas de Tela do Dashboard
 
-```markdown
 ## Capturas de Tela 
 
 Inclua aqui as capturas de tela do seu dashboard. Você pode fazer isso com a sintaxe Markdown:
