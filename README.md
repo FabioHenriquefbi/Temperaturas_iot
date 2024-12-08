@@ -11,31 +11,46 @@ SQLAlchemy para a entrega do relatório, e os dados são armazenados em um banco
 ### Pré-requisitos
 
 - Docker
+
 - Python 3.8+
+
 - Banco de Dados: PostgreSQL
-- Bibliotecas Python: pandas, plotly, sqlalchemy, streamlit, psycopg2
+
+- Bibliotecas Python: 
+- pandas, 
+- plotly, 
+- sqlalchemy, 
+- streamlit, 
+- psycopg2
 
 ### Instalação
+Uma breve descrição da instalação requerida por esse projeto, uma vez que requer que:
 
-1. Clone o repositório do projeto:
-git clone https://github.com/FabioHenriquefbi/temperaturas_iot
+pip install pandas plotly sqlalchemy streamlit psycopg2.
 
-docker run --name postgres-iot -e POSTGRES_PASSWORD=1234 -d postgres
+# Configure o banco de dados Postgres com Docker:
 
-pip install pandas plotly sqlalchemy streamlit psycopg2
+docker run –name postgres-iot -e POSTGRES_PASSWORD=1234 -d postgres
+
+# Acesse o container para Configurar o banco:
 
 docker exec -it postgres-iot psql -u postgres
-CREATE DATABASE tempo;
-\c tempo 
 
-python ler_csv.py
+# Crie o banco de dados:
+CREATE DATEBASE tempo;
+
+# Conecte-se ao banco de dados:
+\c tempo
+
+# Importe os dados para o banco usando o script ler_csv.py:
+Python ler_csv.py
 
 ### 3. Execução do projeto 
-
 
 ## Execução
 
 1. Execute o dashboard com Streamlit:
+
   streamlit run dashboard.py
 
 #### 4.Capturas de Tela do Dashboard
@@ -44,34 +59,42 @@ python ler_csv.py
 
 Inclua aqui as capturas de tela do seu dashboard. Você pode fazer isso com a sintaxe Markdown:
 
-![Média de temperatura por Dispositivo](./screenshots/media_temp_por_dispositivo.png)
-![Leituras por hora](./screenshots/leituras_por_hora.png)
-![Temperatura Máximas e Mínimas por Dia](./screenshots/temp_max_min_por_dia.png)
+[Média de temperatura por Dispositivo](./screenshots/media_temp_por_dispositivo.png)
+[Leituras por hora](./screenshots/leituras_por_hora.png)
+[Temperatura Máximas e Mínimas por Dia](./screenshots/temp_max_min_por_dia.png)
 
 ## Views SQL
-
-### View 1: Temperaturas Internas
 ```sql
+### View 1: Temperaturas Internas
+
 CREATE VIEW temp_interna AS 
 SELECT "room_id/id", noted_date, temp
 FROM tabela_tempo
 WHERE "out/in" = 'In';
+
+### View 2: Temperaturas Externas
 
 CREATE VIEW temp_externa AS 
 SELECT "room_id/id", noted_date, temp
 FROM tabela_tempo
 WHERE "out/in" = 'Out';
 
+### View 2: Média de Temperatura por Sala
+
 CREATE VIEW media_temp_sala AS
 SELECT "room_id/id", AVG(temp) AS media_temp
 FROM tabela_tempo
 GROUP BY "room_id/id";
+
+### View 2: Leituras por Hora
 
 CREATE VIEW leituras_por_hora AS 
 SELECT DATE_PART('hour', noted_date) AS hora, COUNT(*) AS contagem
 FROM tabela_tempo
 GROUP BY DATE_PART('hour', noted_date)
 ORDER BY hora;
+
+### View 2: Temperatura Máxima e Minima por Dia
 
 CREATE VIEW temp_max_min_por_dia AS
 SELECT DATE(noted_date) AS data, MAX(temp) AS temp_max, MIN(temp) AS temp_min
