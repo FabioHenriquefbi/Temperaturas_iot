@@ -59,9 +59,9 @@ Python ler_csv.py
 
 Inclua aqui as capturas de tela do seu dashboard. Você pode fazer isso com a sintaxe Markdown:
 
-[Média de temperatura por Dispositivo](./screenshots/media_temp_por_dispositivo.png)
-[Leituras por hora](./screenshots/leituras_por_hora.png)
-[Temperatura Máximas e Mínimas por Dia](./screenshots/temp_max_min_por_dia.png)
+![Média de temperatura por Dispositivo](./screenshots/media_temp_por_dispositivo.png)
+![Leituras por hora](./screenshots/leituras_por_hora.png)
+![Temperatura Máximas e Mínimas por Dia](./screenshots/temp_max_min_por_dia.png)
 
 ## Views SQL
 ```sql
